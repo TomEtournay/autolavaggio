@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html style="overflow: scroll;">
+
+    <head>
+        <title>Auto Lavaggio</title>
+        <meta name="description" content="Votre méta-description ici">
+        <link rel="icon" type="image/png" href="images/voiture_verte.svg">
+
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="/stylesheets/preset.css">
+        <link rel="stylesheet" href="/stylesheets/loading.css">
+        <link rel="stylesheet" href="stylesheets/station.css">
+        <link rel="stylesheet" href="/stylesheets/responsive.css">
+        <link rel="stylesheet" href="stylesheets/index.css">
+        <link rel="stylesheet" href="stylesheets/footer.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Tom ETOURNAY">
+
+        <link rel="preload" href="Javascript/chargement.js" as="script">
+        <link rel="preload" href="stylesheets/style.css" as="style">
+        <script src="Javascript/chargement.js"></script>
+
+    </head>
+
+
+    <!-- <div id="loadingScreen">
+        <svg width="61.33%" height="100%" viewBox="0 0 628 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg_logo">
+            <g clip-path="url(#clip0_746_603)">
+                <path d="M64.5073 34.762V81.6463H58.3946L57.6162 74.5422C55.3307 77.1602 52.4989 79.2451 49.3203 80.6499C46.1417 82.0548 42.6937 82.7454 39.2192 82.6732C25.3578 82.6732 14.9541 72.1685 14.9541 58.2055C14.9541 44.1625 25.3578 33.7365 39.2192 33.7365C42.7159 33.6595 46.1865 34.3556 49.3831 35.775C52.5796 37.1944 55.4234 39.302 57.7113 41.9475L58.6319 34.762L64.5073 34.762ZM56.9691 58.2041C57.0492 55.9185 56.6602 53.6406 55.8261 51.5111C54.9921 49.3815 53.7306 47.4453 52.1196 45.822C50.5085 44.1987 48.582 42.9225 46.4588 42.0723C44.3357 41.2221 42.0608 40.8159 39.7746 40.8786C37.4866 40.824 35.2113 41.2353 33.0871 42.0872C30.9629 42.9392 29.034 44.2141 27.4178 45.8346C25.8015 47.455 24.5315 49.3871 23.685 51.5135C22.8386 53.6399 22.4332 55.9162 22.4936 58.2041C22.4325 60.4923 22.8374 62.769 23.6836 64.8958C24.5298 67.0225 25.7998 68.955 27.4162 70.5757C29.0325 72.1964 30.9616 73.4714 33.0862 74.3233C35.2107 75.1752 37.4863 75.5861 39.7746 75.531C42.0609 75.5937 44.3359 75.1873 46.4591 74.337C48.5823 73.4867 50.5089 72.2105 52.12 70.587C53.731 68.9636 54.9924 67.0273 55.8264 64.8976C56.6604 62.7679 57.0493 60.4899 56.9691 58.2041Z" fill="#80C341" />
+                <path d="M165.598 58.2037C165.598 44.0662 176.255 33.7346 190.455 33.7346C204.664 33.7346 215.313 44.1541 215.313 58.2037C215.313 72.2533 204.664 82.6727 190.455 82.6727C176.255 82.6727 165.598 72.2532 165.598 58.2037ZM190.456 75.5306C192.752 75.6092 195.04 75.2148 197.177 74.3719C199.314 73.529 201.255 72.2555 202.88 70.6307C204.504 69.0058 205.777 67.0643 206.619 64.9267C207.462 62.7891 207.855 60.5011 207.776 58.205C207.781 55.9274 207.337 53.6712 206.468 51.5655C205.6 49.4598 204.325 47.5461 202.717 45.9338C201.108 44.3215 199.197 43.0423 197.093 42.1695C194.99 41.2966 192.734 40.8473 190.457 40.8472C188.179 40.8472 185.924 41.2963 183.82 42.1689C181.716 43.0416 179.805 44.3206 178.197 45.9328C176.588 47.545 175.313 49.4587 174.444 51.5643C173.576 53.6699 173.132 55.926 173.137 58.2036C173.058 60.4996 173.451 62.7873 174.294 64.9247C175.136 67.062 176.409 69.0034 178.033 70.6283C179.657 72.2531 181.598 73.5267 183.734 74.3701C185.871 75.2134 188.159 75.6084 190.455 75.5305L190.456 75.5306Z" fill="#80C341" />
+                <path d="M0.315426 43.9187C0.315426 43.9187 2.01718 25.274 18.4279 21.9475C34.8387 18.621 60.3186 25.6361 60.3186 25.6361C60.3186 25.6361 49.5257 18.1355 41.5908 15.68C41.5908 15.68 54.2543 9.66283 76.2961 6.26917C98.3379 2.8755 114.398 1.7443 129.691 7.26269C144.983 12.7811 161.763 20.5429 161.763 20.5429L156.18 21.7198C156.18 21.7198 183.888 22.2539 201.508 26.6469C219.127 31.0399 229.007 35.8582 229.007 35.8582H220.827L238.539 48.885L237.395 37.8035C237.342 37.2991 237.182 36.8118 236.925 36.3747C236.668 35.9376 236.32 35.561 235.904 35.2704C231.027 31.8421 212.151 20.8825 169.177 20.0134C168.265 19.9982 167.369 19.761 166.569 19.3223C160.294 15.8518 130.138 0 102.884 0C72.2804 0 37.5339 10.2129 29.3915 12.2444C21.249 14.2758 7.89777 17.6142 5.73365 17.9512C3.56952 18.2883 2.05241 18.2264 1.98036 20.438C1.893 22.3139 1.992 24.1938 2.2759 26.0501C2.49767 26.9741 2.20937 27.1913 1.46645 28.5427C0.723527 29.8941 -0.610145 35.3969 0.315426 43.9187Z" fill="#80C341" />
+                <path d="M64.0572 23.4482C59.8679 20.5811 55.4885 18.002 50.9492 15.729C60.0434 12.6008 69.4062 10.3162 78.9192 8.9043C78.9192 8.9043 65.9162 12.6353 59.507 15.333C59.507 15.333 66.2352 19.7172 67.1498 20.226C68.0644 20.7348 68.178 21.2 74.535 21.4002C80.8921 21.6005 135.484 22.8869 135.484 22.8869C135.484 22.8869 77.3074 24.7283 72.8351 24.7283C68.3627 24.7283 66.1459 24.5414 64.0572 23.4482Z" fill="#80C341" />
+                <g clip-path="url(#clip1_746_603)">
+                    <path d="M99.7878 82.8387C112.475 82.8387 120.575 74.6133 120.575 62.0326V34.9275H113.196V60.8431C113.196 69.9734 108.144 75.6966 99.7878 75.6966C91.5119 75.6966 86.3802 70.0521 86.3802 60.8431V34.9275H79V62.0326C79 74.6133 87.1808 82.8387 99.7878 82.8387Z" fill="black" />
+                    <path d="M137.292 65.4215C137.292 75.5853 143.509 81.8094 153.579 81.8094H159.652V74.9847H154.53C148.149 74.9847 144.672 71.4923 144.672 65.1829V41.5925H159.377V34.925H144.672V25H143.517L129.041 40.2718V41.5925H137.292L137.292 65.4215Z" fill="black" />
+                </g>
+                <path d="M263.183 65.6136V18.623H255.803V65.8523C255.803 76.0161 262.02 82.2402 272.09 82.2402H278.163V75.4155H273.04C266.66 75.4154 263.183 71.923 263.183 65.6136Z" fill="black" />
+                <path d="M324.275 42.5375C321.987 39.8921 319.143 37.7845 315.946 36.3651C312.75 34.9457 309.279 34.2496 305.783 34.3265C291.921 34.3265 281.518 44.7526 281.518 58.7956C281.518 72.7586 291.921 83.2633 305.783 83.2633C309.257 83.3355 312.705 82.6449 315.884 81.24C319.062 79.8351 321.894 77.7503 324.18 75.1323L324.958 82.2364H331.071V35.3521H325.195L324.275 42.5375ZM306.338 76.1212C304.05 76.1763 301.774 75.7654 299.65 74.9135C297.525 74.0616 295.596 72.7866 293.98 71.1659C292.363 69.5452 291.093 67.6127 290.247 65.486C289.401 63.3592 288.996 61.0825 289.057 58.7943C289.045 56.5232 289.483 54.2721 290.344 52.1705C291.205 50.0688 292.473 48.1581 294.074 46.548C295.676 44.9379 297.58 43.6602 299.678 42.7883C301.775 41.9165 304.024 41.4677 306.295 41.4677C308.566 41.4677 310.815 41.9165 312.912 42.7883C315.009 43.6602 316.913 44.9379 318.515 46.548C320.117 48.1581 321.385 50.0688 322.246 52.1705C323.107 54.2721 323.544 56.5232 323.533 58.7943C323.613 61.0801 323.224 63.3581 322.39 65.4878C321.556 67.6175 320.294 69.5537 318.683 71.1772C317.072 72.8007 315.146 74.0769 313.023 74.9272C310.899 75.7775 308.624 76.1839 306.338 76.1212V76.1212Z" fill="black" />
+                <path d="M361.255 72.6517L345.336 35.356H337.63L357.911 82.2402H364.625L384.392 35.356H376.846L361.255 72.6517Z" fill="black" />
+                <path d="M428.901 42.5375C426.613 39.8921 423.769 37.7845 420.572 36.3651C417.376 34.9457 413.905 34.2496 410.409 34.3265C396.547 34.3265 386.144 44.7526 386.144 58.7956C386.144 72.7586 396.547 83.2633 410.409 83.2633C413.883 83.3355 417.331 82.6449 420.51 81.24C423.688 79.8351 426.52 77.7503 428.806 75.1323L429.584 82.2364H435.697V35.3521H429.821L428.901 42.5375ZM410.964 76.1212C408.676 76.1763 406.4 75.7654 404.276 74.9135C402.151 74.0616 400.222 72.7866 398.606 71.1659C396.989 69.5452 395.719 67.6127 394.873 65.486C394.027 63.3592 393.622 61.0825 393.683 58.7943C393.671 56.5232 394.109 54.2721 394.97 52.1705C395.831 50.0688 397.099 48.1581 398.7 46.548C400.302 44.9379 402.206 43.6602 404.304 42.7883C406.401 41.9165 408.65 41.4677 410.921 41.4677C413.192 41.4677 415.441 41.9165 417.538 42.7883C419.635 43.6602 421.539 44.9379 423.141 46.548C424.743 48.1581 426.011 50.0688 426.872 52.1705C427.733 54.2721 428.17 56.5232 428.158 58.7943C428.239 61.0801 427.85 63.3581 427.016 65.4878C426.182 67.6175 424.92 69.5537 423.309 71.1772C421.698 72.8007 419.772 74.0769 417.649 74.9272C415.525 75.7775 413.25 76.1839 410.964 76.1212V76.1212Z" fill="black" />
+                <path d="M485.944 42.6462C483.72 39.9925 480.931 37.8687 477.781 36.4297C474.632 34.9906 471.201 34.2724 467.739 34.3277C464.685 34.2945 461.656 34.8745 458.831 36.0332C456.006 37.1919 453.442 38.9058 451.291 41.0734C449.14 43.241 447.446 45.8182 446.309 48.6524C445.172 51.4866 444.616 54.52 444.673 57.5731C444.616 60.6224 445.173 63.6519 446.311 66.4816C447.449 69.3112 449.144 71.8831 451.296 74.0444C453.447 76.2057 456.012 77.9122 458.836 79.0625C461.661 80.2127 464.688 80.7832 467.737 80.7399C470.908 80.7933 474.056 80.2028 476.992 79.0042C479.927 77.8057 482.589 76.024 484.816 73.767V76.6325C484.816 87.027 478.43 93.2539 469.051 93.2539C462.217 93.2539 456.309 89.928 454.22 84.0632H446.841C449.405 94.0132 457.554 100 469.051 100C483.316 100 492.04 90.7962 492.04 75.6817V35.3558L487.115 35.3532L485.944 42.6462ZM468.531 73.6764V73.6778C466.396 73.7006 464.278 73.3 462.3 72.499C460.321 71.6979 458.521 70.5125 457.003 69.0112C455.486 67.5098 454.281 65.7225 453.459 63.7525C452.637 61.7826 452.214 59.6691 452.214 57.5345C452.214 55.3998 452.637 53.2864 453.459 51.3164C454.281 49.3464 455.486 47.5591 457.003 46.0578C458.521 44.5565 460.321 43.371 462.3 42.57C464.278 41.769 466.396 41.3683 468.531 41.3912C470.677 41.3185 472.815 41.6873 474.812 42.4746C476.81 43.2618 478.625 44.4508 480.144 45.968C481.664 47.4851 482.856 49.298 483.646 51.2945C484.436 53.2909 484.808 55.4284 484.739 57.5745C484.801 59.7149 484.424 61.8454 483.63 63.8342C482.836 65.823 481.643 67.6278 480.123 69.137C478.604 70.6462 476.792 71.8277 474.798 72.6085C472.804 73.3893 470.671 73.7528 468.531 73.6764V73.6764Z" fill="black" />
+                <path d="M542.295 42.6462C540.07 39.9925 537.282 37.8687 534.132 36.4297C530.983 34.9906 527.552 34.2724 524.089 34.3277C521.036 34.2945 518.007 34.8745 515.181 36.0332C512.356 37.1919 509.792 38.9058 507.641 41.0734C505.491 43.241 503.797 45.8182 502.66 48.6524C501.523 51.4866 500.967 54.52 501.023 57.5731C500.967 60.6224 501.524 63.6519 502.662 66.4816C503.799 69.3112 505.494 71.8831 507.646 74.0444C509.798 76.2057 512.362 77.9122 515.187 79.0625C518.011 80.2127 521.038 80.7832 524.088 80.7399C527.258 80.7933 530.407 80.2028 533.342 79.0042C536.278 77.8057 538.94 76.024 541.167 73.767V76.6325C541.167 87.027 534.78 93.2539 525.402 93.2539C518.568 93.2539 512.66 89.928 510.571 84.0632H503.191C505.755 94.0132 513.905 100 525.402 100C539.667 100 548.39 90.7962 548.39 75.6817V35.3558L543.466 35.3532L542.295 42.6462ZM524.881 73.6764V73.6778C522.747 73.7006 520.629 73.3 518.65 72.499C516.672 71.6979 514.872 70.5125 513.354 69.0112C511.837 67.5098 510.632 65.7225 509.81 63.7525C508.988 61.7826 508.564 59.6691 508.564 57.5345C508.564 55.3998 508.988 53.2864 509.81 51.3164C510.632 49.3464 511.837 47.5591 513.354 46.0578C514.872 44.5565 516.672 43.371 518.65 42.57C520.629 41.769 522.747 41.3683 524.881 41.3912C527.027 41.3185 529.165 41.6873 531.163 42.4746C533.161 43.2618 534.975 44.4508 536.495 45.968C538.014 47.4851 539.206 49.298 539.997 51.2945C540.787 53.2909 541.159 55.4284 541.09 57.5745C541.152 59.7149 540.774 61.8454 539.98 63.8342C539.187 65.823 537.993 67.6278 536.474 69.137C534.955 70.6462 533.142 71.8277 531.148 72.6085C529.154 73.3893 527.021 73.7528 524.881 73.6764V73.6764Z" fill="black" />
+                <path d="M568.455 35.356H561.075V82.2403H568.455V35.356Z" fill="black" />
+                <path d="M602.28 34.333C588.08 34.333 577.423 44.6646 577.423 58.802C577.423 72.8516 588.08 83.2711 602.28 83.2711C616.488 83.2711 627.137 72.8516 627.137 58.802C627.137 44.7525 616.488 34.333 602.28 34.333ZM602.281 76.1289H602.28C599.984 76.2067 597.697 75.8117 595.56 74.9683C593.423 74.125 591.482 72.8514 589.858 71.2266C588.234 69.6017 586.961 67.6604 586.119 65.523C585.276 63.3857 584.882 61.098 584.961 58.802C584.957 56.5247 585.401 54.2688 586.27 52.1636C587.138 50.0584 588.413 48.1451 590.022 46.5333C591.631 44.9214 593.542 43.6427 595.645 42.7703C597.749 41.8978 600.004 41.4488 602.281 41.4489C604.559 41.4489 606.814 41.8982 608.917 42.7708C611.021 43.6434 612.931 44.9223 614.54 46.5342C616.149 48.1462 617.424 50.0596 618.292 52.1649C619.16 54.2701 619.605 56.526 619.6 58.8033C619.68 61.0994 619.286 63.3873 618.444 65.5248C617.602 67.6623 616.329 69.6038 614.705 71.2287C613.081 72.8535 611.14 74.127 609.002 74.97C606.865 75.813 604.577 76.2075 602.281 76.129L602.281 76.1289Z" fill="black" />
+                <path d="M565.001 17.4341C564.032 17.4341 563.084 17.7216 562.278 18.2603C561.471 18.799 560.843 19.5646 560.472 20.4605C560.101 21.3563 560.004 22.3421 560.193 23.2931C560.382 24.2441 560.849 25.1177 561.535 25.8033C562.22 26.489 563.094 26.9559 564.045 27.1451C564.996 27.3343 565.981 27.2372 566.877 26.8662C567.773 26.4951 568.539 25.8667 569.078 25.0605C569.616 24.2543 569.904 23.3064 569.904 22.3368C569.904 21.0365 569.387 19.7895 568.468 18.8701C567.549 17.9507 566.302 17.4341 565.001 17.4341Z" fill="black" />
+            </g>
+            <defs>
+                <clipPath id="clip0_746_603">
+                    <rect width="38.06%" height="100" fill="white" class="lavaggio" />
+                </clipPath>
+                <clipPath id="clip1_746_603">
+                    <rect width="0%" height="57.8387" fill="white" transform="translate(79 25)" class="ut" />
+                </clipPath>
+            </defs>
+        </svg>
+    </div> -->
+
+    <div id="myThreeJsScene" class="voiture_container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <body id="haute_pression">
+
+        <section class="column-jcc-aic p-64">
+
+            <header id="home_header" class="row-jcsb px-64">
+
+                <a href="index.html">
+
+                    <div>
+                        <img src="images/logo.svg" alt="Logo Autolavaggio">
+                    </div>
+
+                </a>
+
+                <ul id="home_menu" class="ml-auto">
+
+                    <a href="#station">Nos stations</a>
+
+                    <a href="#paiement" class="mx-32">Paiement</a>
+
+                    <a href="#service">Service</a>
+
+                    <a href="#temoignage" class="mx-32">Témoignage</a>
+
+                    <a href="#contact">Contacter</a>
+
+                </ul>
+
+                <img id="burger" src="images/burger.svg" onclick="burger()" alt="Hamburger menu">
+                <img id="cross" src="images/cross.svg" onclick="cross()" alt="Croix de fermeture">
+
+            </header>
+
+            <!-- Responsive hamburger -->
+
+            <div class="hamburger_container">
+
+                <ul>
+
+                    <a href="#station">Nos stations</a>
+
+                    <a href="#paiement">Paiement</a>
+
+                    <a href="#service">Service</a>
+
+                    <a href="#temoignage">Témoignage</a>
+
+                    <a href="#contact">Contacter</a>
+
+                </ul>
+
+            </div>
+
+
+            <div class="value_proposal_sation column-jcc-aic">
+
+                <h1 class="green">Piste haute pression</h1>
+
+                <h2 class="my-32">Centre de lavage auto lavaggio</h2>
+
+                <div class="container_button">
+
+                    <a href="#tarifs"><button class="black_green">TARIFS</button></a>
+
+                    <a href="#MDE"><button>MODE D'EMPLOI</button></a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section id="MDE" class="p-64">
+
+            <h2 class="green">Mode d’emploi</h2>
+
+            <div class="container_all_block pt-64">
+
+                <div class="container_block_MDE">
+
+                    <a href="#conseil" class="ttt">
+
+                        <div class="block_MDE">
+
+                            <img src="images/conseil.svg" alt="Icone conseil">
+
+                            <h4>Conseil de lavage</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">1</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#jante">
+
+                        <div class="block_MDE">
+
+                            <img src="images/jante.svg" alt="Icone jante">
+
+                            <h4>Produit jante</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">2</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#pre_lavage">
+
+                        <div class="block_MDE">
+
+                            <img src="images/prelavage.svg" alt="Icone Pré-lavage">
+
+                            <h4>Pré-lavage</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">3</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#lavage">
+
+                        <div class="block_MDE">
+
+                            <img src="images/lavage.svg" alt="Icone Lavage">
+
+                            <h4>Lavage</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">4</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#rinçage">
+
+                        <div class="block_MDE">
+
+                            <img src="images/rincage.svg" alt="Icone Rinçage">
+
+                            <h4>Rinçage</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">5</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#lustrant">
+
+                        <div class="block_MDE">
+
+                            <img src="images/lustrant.svg" alt="Icone Lustrant">
+
+                            <h4>Lustrant</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">6</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a href="#finition">
+
+                        <div class="block_MDE">
+
+                            <img src="images/finition.svg" alt="Icone Finition">
+
+                            <h4>Finition</h4>
+
+                            <div class="cercle">
+
+                                <div class="cercle_vert">
+
+                                    <p class="number_MDE">7</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="conseil" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene" style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">Conseil de lavage haute pression de votre voiture</h4>
+
+                    <p>Utilisez la lance toujours de haut en bas, en effectuant d’amples zigzags N’ayez pas peur de
+                        laver à faible distance (5 à 10 cm, la largeur d’une main par exemple). Au-delà, le jet perd de
+                        son efficacité Lavez votre véhicule régulièrement : vous irez plus vite pour un résultat plus
+                        efficace… et vous ferez des économies au bout du compte ! </p>
+
+                    <div class="suivant">
+
+                        <p>Voir le conseil suivant :</p>
+
+                        <a href="#jante" class="green">comment par appliquer le lave-jantes.</a>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="jante" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene" style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">Comment par appliquer le lave-jantes</h4>
+
+                    <p>Le produit lave-jantes facilite le nettoyage des jantes lors du lavage. Il est à pulvériser sur
+                        jantes sèches en insistant davantage sur l’avant que sur l’arrière. Ce produit est à utiliser
+                        uniquement sur des jantes vernies.<br><br>Conseils pour le lavage haute pression de votre
+                        véhicule :<br>
+
+                        <li>Appuyer sur le bouton orange « marche » </li>
+
+                        <li>Prendre la lance lave-jantes</li>
+
+                        <li>Pulvériser sur les jantes en appuyant sur la gâchette</li>
+                        Laissez le produit agir pendant que vous lavez, commencez par laver la carrosserie. Le crédit
+                        étant commun (lave jantes/lavage), vous pouvez immédiatement commencer le lavage.<br><br>Laissez
+                        agir le produit quelques minutes et vos jantes ressortiront comme neuves.
+                    </p>
+
+                    <div class="suivant">
+
+                        <p>Voir le conseil suivant :</p>
+
+                        <a href="#pre_lavage" class="green">l’utilisation du pré-lavage.</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="pre_lavage" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene" style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">L’utilisation du pré-lavage</h4>
+
+                    <p>Un premier passage de la lance sur la carrosserie, avec du savon et de l’eau chaude savonneuse
+                        projetés en basse pression détrempe la voiture et facilite le retrait des saletés tenaces comme
+                        les moustiques ou la boue.<br><br>Sur la position « pré-lavage », un tour rapide de votre
+                        véhicule suffit à détremper et ramollir les saletés. Vous gagnerez du temps sur les étapes
+                        suivantes du lavage et obtiendrez un résultat parfait. L’utilisation du pré-lavage</p>
+
+                    <div class="suivant">
+
+                        <p>Voir le conseil suivant :</p>
+
+                        <a href="#lavage" class="green">le lavage</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="lavage" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene" style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">Le lavage</h4>
+
+                    <p>Le secret de la qualité du lavage haute pression Eléphant Bleu est l’association du savon et de
+                        l’eau chaude (60/65°) projetés à une pression de 90 Bar.<br><br>Commencez par laver le toit,
+                        puis l’arrière et terminez par l’avant et les jantes. Si vous n’avez pas utilisé le « pré-lavage
+                        » commencez par détremper votre véhicule, en particulier l’avant, les vitrages et le bas de
+                        caisse.<br><br>Astuce : lavez votre véhicule en allant du toit vers le bas </p>
+
+                    <div class="suivant">
+
+                        <p>Voir le conseil suivant :</p>
+
+                        <a href="#rinçage" class="green">le rinçage.</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="rinçage" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene " style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">Le rinçage</h4>
+
+                    <p>L’eau de rinçage dite « dure » va faciliter le retrait du savon.<br><br>Pour vous assurer
+                        d’éliminer toute trace de savon et faciliter l'application du soin brillance (lustrant), nous
+                        vous recommandons de bien rinçer de haut en bas en insistant sur les rétroviseurs, les poignées
+                        et les endroits où reste coincé le savon.</p>
+
+                    <div class="suivant">
+
+                        <p>Voir le conseil suivant :</p>
+
+                        <a href="#lustrant" class="green">le lustrant - brillance</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="lustrant" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene" style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">Le lustrant - brillance</h4>
+
+                    <p>Le produit lustrant offre une brillance éclatante à la carrosserie de votre véhicule et facilite
+                        le séchage après le rinçage en finition grâce à son effet déperlant.
+                        Le produit lustrant garantit une finition parfaite grâce à ces trois propriétés :  
+
+                        <li>Il donne plus de brillance à la carrosserie</li>
+
+                        <li>Il assure un séchage rapide</li>
+
+                        <li>Le lustrant est un produit « déperlant » qui va faire glisser l’eau de pluie sur votre
+                            carrosserie et ainsi prolonger la propreté de votre véhicule</li>
+                        Nous vous conseillons de faire un tour rapide de la voiture avec la lance en projetant le
+                        produit sur la carrosserie, les vitres et les jantes. La finition Pour un résultat nickel, c’est
+                        LA fonction essentielle !
+                    </p>
+
+                    <div class="suivant">
+
+                        <p>Voir le conseil suivant :</p>
+
+                        <a href="#finition" class="green">la finition</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="finition" class="vertical_section">
+
+            <div class="container_scene_voituretext">
+
+                <div class="container_img">
+                    <img src="images/voiture.png" alt="Simulation scene" style="opacity: 0;">
+                </div>
+
+                <div class="container_text">
+
+                    <h4 class="green">La finition</h4>
+
+                    <p>La position « finition » est un rinçage à l’eau déminéralisée pour enlever toute trace de
+                        calcaire ou de lustrant. <br><br>La phase de finition est impérative !</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer id="footer" class="column-jcc-aic p-64">
+
+            <h2>Merci de votre <mark>visite !</mark></h2>
+
+            <div class="column-jcc-aic pt-124" style="width: inherit;">
+
+                <a href="#home" class="mb-64"><img src="images/logo_vertical.svg" alt="Logotype Auto Lavaggio"></a>
+
+                <div class="container_link row-jcsb">
+
+                    <div class="column">
+
+                        <h4 class="green">Nos stations</h4>
+
+                        <ul class="column mt-32">
+
+                            <a href="lamontagne.html">La Montagne</a>
+
+                            <a href="bassegoulaine.html" class="my-32">Basse Goulaine</a>
+
+                            <a href="chateaubriant.html">Châteaubriant</a>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="column">
+
+                        <h4 class="green">Liens Utiles</h4>
+
+                        <ul class="column mt-32">
+
+                            <a href="index.html#paiement">Paiement</a>
+
+                            <a href="index.html#service" class="my-32">Service</a>
+
+                            <a href="index.html#contacter">Contacter</a>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="column">
+
+                        <h4 class="green">Autres liens</h4>
+
+                        <ul class="column mt-32">
+
+                            <a href="mention.html">Mentions Légales</a>
+
+                            <a href="politique.html" class="my-32">Politique De Confidentialité</a>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </body>
+
+    <!-- <script src="Javascript/MDE.JS"></script> -->
+    <script type="module" src="Javascript/voiture_piste_ordinateurs.js" class="script_voiture_ordinateur"></script>
+
+</html>

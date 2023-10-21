@@ -1,0 +1,69 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.row-jcc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row-aic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row-jcc-aic, .row-aic-jcc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.row-jcsb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-jcsb-aic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.column-jcc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column-aic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-jcc-aic, .column-aic-jcc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+  

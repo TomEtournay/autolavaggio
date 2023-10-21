@@ -1,0 +1,1172 @@
+/* IMPORTATION */
+
+@import url(component/button.css);
+@import url(component/padding.css);
+@import url(component/margin.css);
+@import url(component/font.css);
+@import url(component/container.css);
+
+/* preset */
+
+:root {
+    font-size: 16px;
+
+    
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: transform ease-in 1s;
+}
+
+button {
+    padding: 16px 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #80C341;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #24353F;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    border: solid 1px black;
+    min-height: 100vh;
+}
+
+mark {
+    background: none;
+    color: #80C341;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+    margin: 0;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.voiture_container {
+    z-index: -1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+input{
+    display: flex;
+    padding: 16px 24px;
+    width: 100%;
+    border: 1px solid #24353F;
+    border-radius: 5px;
+
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #24353F;
+}
+
+input::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #24353F;
+}
+
+textarea {
+    display: flex;
+    padding-top: 16px;
+    padding-left: 24px;
+    width: 100%;
+    border: 1px solid #24353F;
+    border-radius: 5px;
+    resize: none;
+    height: auto;
+
+
+    box-sizing: border-box;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #24353F;
+}
+
+textarea::placeholder {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #24353F;
+}
+
+footer{
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+.green {
+    color: #80C341;
+}
+
+.black_green {
+    background-color: #5B8D4B;
+}
+
+.bg_black {
+    background-color: #24353F;
+}
+
+.green_p {
+    background-color: #80C341 !important;
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.point {
+    background-color: #D9D9D9;
+    border-radius: 100px;
+    width: 10px;
+    height: 10px;
+}
+
+
+/* style */
+
+
+#haute_pression {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000%;
+}
+
+.anti_row {
+    width: 100%;
+}
+
+/* home */
+
+
+#home .container {
+    display: flex;
+    width: 91.4%;
+    gap: 24px;
+    margin: auto 0px;
+}
+
+
+.value_proposal button {
+    margin-right: auto;
+}
+
+#hero-station{
+    position: relative;
+}
+
+#home_header {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+}
+
+
+#home_menu a {
+    font-weight: 590;
+    font-size: 1rem;
+    line-height: 24px;
+}
+
+
+
+.container_navbar {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50px);
+    transition: transform ease-in 0.2s;
+}
+
+.container_navbar a {
+    cursor: pointer;
+}
+
+
+
+
+.container_link {
+    width: 68%;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+
+
+
+/* service */
+
+
+
+
+.container_service form {
+    width: 100%;
+}
+
+
+
+.Claire_form button {
+    margin-left: auto;
+}
+
+
+.container_texte_panneau h3 {
+    margin: 0 auto;
+}
+
+
+/* paiement */
+
+
+
+
+.block_paiement {
+    width: 35%;
+}
+
+.block_paiement font {
+    height: 48px;
+    width: fit-content;
+}
+
+
+/* témoignage */
+
+
+
+
+/* 
+.container {
+    width: 91.4%;
+    gap: 32px;
+} */
+
+
+.all_container_temoignage{
+    overflow: hidden;
+
+}
+
+.coulissant{
+    width: 500%;
+    
+}
+.container_temoignage {
+    gap: 16px;
+    width: 100%;
+}
+
+.container_temoignage p {
+    text-align: center;
+    width: 90%;
+}
+
+.container_arrow font {
+    cursor: pointer;
+}
+
+.profil{
+    width: 100px;
+}
+
+
+/* contacter */
+
+
+
+
+
+.container_input {
+    gap: 16px;
+    width: 100%;
+}
+
+.container_textarea_input {
+    width: 200%;
+    transition: ease-in 0.5s;
+}
+
+.next {
+    margin-left: auto;
+}
+
+.submit {
+    display: none;
+}
+
+.container_btn {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 16px;
+}
+
+.return {
+    display: none;
+}
+
+
+
+
+
+/* Haute_pression.html */
+
+
+#haute_pression .container {
+    display: flex;
+    width: 91.4%;
+    gap: 24px;
+    margin: auto 0px;
+}
+
+
+.block_MDE {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.13);
+
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+.block_MDE {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 104px;
+    width: 179px;
+    overflow: hidden;
+}
+
+.block_MDE font {
+    height: 32px;
+    margin-bottom: 16px;
+}
+
+.cercle {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+
+.cercle_vert {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    position: absolute;
+    background-color: #80C341;
+    border-radius: 100px;
+    width: 64px;
+    height: 64px;
+}
+
+.cercle_vert p {
+    margin-right: 16px;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+
+.container_block_MDE {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.container_all_block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 32px;
+}
+
+
+.vertical_section {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_scene_voituretext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    width: 82.8%;
+}
+
+.container_scene_voituretext div {
+    width: 100%;
+}
+
+.container_text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+
+
+
+
+/* suivant */
+
+.suivant {
+    display: flex;
+    gap: 4px;
+}
+
+
+
+
+
+/* STATION */
+
+#lamontagne {
+    width: 100%;
+    height: 600%;
+}
+
+.value_proposal_sation {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.container_button {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.horaires_btn {
+    width: 154px;
+}
+
+/* coordonnées */
+
+.container_blanc {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.13);
+
+    border-radius: 10px;
+}
+
+.container_blanc div {
+    width: 100%;
+}
+
+.maps {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container_textlien {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.container_logolien {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.container_coordonnées {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+/* horaire */
+
+
+
+
+.tiret_align {
+    align-items: center;
+}
+
+
+/* services */
+
+
+.container_block_blanc {
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+.container_block_blanc a {
+    width: 100%;
+    height: 100%;
+    min-height: 128px;
+    min-width: 224px;
+}
+
+
+.block_blanc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.13);
+
+    border-radius: 5px;
+    height: 100%;
+}
+
+.block_blanc h4 {
+    width: 206px;
+    text-align: center;
+}
+
+
+/* Gallery */
+
+
+.container_photo {
+    width: 80%;
+    height: 60%;
+}
+
+
+
+.container_gros_font font {
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+
+.container_petit_font font {
+    width: 32%;
+    height: 49.5%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* responsive */
+
+
+.hamburger_container {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    right: 0;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform ease-in-out 0.5s;
+    align-items: flex-end;
+}
+
+.hamburger_container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hamburger_container ul a {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 510;
+    font-size: 24px;
+    line-height: 48px;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-in 0.5s;
+}
+
+.hamburger_container ul a:hover {
+    background-color: #D9D9D9;
+}
+
+#cross {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    margin-top: 3px;
+    margin-right: 3px;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+
+#burger {
+    display: none;
+    opacity: 1;
+    transition: opacity 0.5s;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* mention */
+
+#mentions {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.container_m {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 91.4%;
+    margin: 0 auto;
+    gap: 32px;
+}
+
+.container_mentions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.container_mentions ul {
+    margin-left: 32px;
+}
+
+.container_mentions ul li {
+    margin-left: 0px;
+}
+
+.container_mentions li {
+    margin-left: 32px;
+}
+
+
+
+
+
+
+/* loading */
+
+/* écran de chargement */
+
+
+#loadingScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000000;
+    background-color: white;
+    transition: opacity ease-in 1s;
+    opacity: 1;
+}
+
+.svg_logo {
+    transform: translateX(-71%);
+    transition: transform ease-out 500ms;
+}
+
+
+.lavaggio {
+    transition: width ease-out 500ms;
+}
+
+.ut {
+    transition: width ease-out 400ms;
+}
+
+
+
+
+
+
+
+
+
+
+/* index */
+
+
+#index {
+    width: 700%;
+    height: 100%;
+}
+
+.container_station h3{
+    position: absolute;
+    width: max-content;
+    color: white;
+    pointer-events: none;
+    transition: all ease-in 250ms;
+}
+
+.container_station a:hover h3{
+    scale: 1.25;
+}
+
+
+/* Photo */
+
+#illustration_lamontagne{
+    background-image: url("/images/lamontagne.png");
+}
+
+#illustration_bassegoulaine{
+    background-image: url("/images/bassegoulaine.png");
+}
+
+#illustration_Chateaubrillant{
+    background-image: url("/images/chateaubrillant.png");
+}
+
+
+#illustration_lamontagne, #illustration_Chateaubrillant, #illustration_bassegoulaine {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: inherit;
+    border-radius: 5px;
+    background-position: center;
+    height: 264px;
+}
+
+
+
+
+
+
+
+
+.experince{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+.experince a {
+    flex: 0 0 calc(33.33% - 16px); /* Ajustez la largeur pour trois éléments par ligne */
+}
+
+.experince div{
+    padding: 32px 0px;
+}
+
+
+
+
+.container_font{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.container_font font {
+    flex: 0 0 calc(20% - 5px); /* Ajustez la largeur pour trois éléments par ligne */
+
+}
+
+
+
+
+
+#horaires > div > div:nth-child(1) > font{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.container_block_MDE{
+    max-width: 1023px;
+}
+
+
+
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+
+    #station > div{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #illustration_bassegoulaine{
+        margin: 0px;
+        margin-left: 32px;
+        margin-bottom: 32px;
+    }
+
+    #station > div a{
+        
+        flex: 0 0 calc(50% - 16px); /* Ajustez la largeur pour trois éléments par ligne */
+        height: 168px; 
+    }
+
+   
+
+
+    #service > div{
+        flex-direction: column;
+    }
+
+    #service > div > div, #service > div > form{
+        margin: 0px;
+    }
+
+    #service > div > div > p{
+        margin: 16px 0px;
+        
+    }
+}
+  
+
+
+@media screen and (max-width: 768px) {
+
+    html{
+        overflow: unset;
+        overflow-x: hidden;
+
+    }
+
+
+
+    body{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column!important;
+    }
+
+    section{
+        height: auto;
+    }
+
+
+    #home_menu{
+        display: none;
+    }
+
+    h1{
+        font-size: 48px;
+        line-height: 54px;
+    }
+
+
+    h2{
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    #home > div.row-aic > div > h2{
+        width: 100%!important;
+    }
+
+
+    #paiement > div > div{
+        flex-direction: column;
+    }
+
+    .block_paiement{
+        width: inherit;
+    }
+
+    #paiement > div > div > div > p{
+        text-align: center;
+    }
+
+    #paiement > div > div.row-jcsb.pt-64, #paiement > div > div:nth-child(1) > div:nth-child(2), #paiement > div > div.row-jcsb.pt-64 > div:nth-child(2){
+        padding-top: 32px;
+    }
+
+    .p-64{
+        padding: 32px;
+    }
+
+    .experince a{
+        flex: 0 0 calc(50% - 16px);
+    }
+
+    .container_font font{
+        flex: 0 0 calc(33.33% - 16px);
+    }
+
+    #coordonnees > div{
+        flex-direction: column;
+    }
+
+    .maps{
+        height: 30vh;
+    }
+
+    .container_img{
+        display: none;
+    }
+
+    #conseil, #jante, #pre_lavage, #lavage, #rinçage, #lustrant, #finition{
+        background-color: rgb(255 255 255 / 50%);
+    }
+
+
+    #station, #contact, #temoignage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_station{
+        padding: 64px 0px 0px 0px;
+    }
+
+
+
+    
+}
+
+
+
+@media screen and (max-width: 425px) {
+    h1{
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    h2{
+        font-size: 24px;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .p-64{
+
+        padding: 32px 16px;
+    }
+
+    #horaires > div{
+        padding-top: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #horaires > div > div:nth-child(1){
+        display: flex;
+        justify-content: center;
+    }
+
+    #horaires > div > div:nth-child(1) > img{
+        width: 50%;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    .container_calendar{
+        padding-top: 32px;
+        margin: 0px;
+    }
+
+    .pt-96{
+        padding-top: 32px;
+    }
+
+    .container_station{
+        flex-direction: column;
+    }
+
+    .container_station a{
+        flex: none!important;
+        width: auto!important;
+    }
+
+    #illustration_bassegoulaine{
+        margin: 32px 0px;
+        
+    }
+
+    #station > div a{
+        height: 23vh;
+    }
+
+    .maps{
+        height: 25vh;
+    }
+
+    .block_blanc h4{
+        width: auto;
+    }
+
+    #home_header{
+        padding: 0px 16px!important;
+    }
+
+    #footer > div > a > img{
+        width: 50%;
+    }
+
+    #footer > div > a{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    .pt-124{
+        padding-top: 64px;
+    }
+
+    .container_font img{
+        flex: 0 0 calc(50% - 16px);
+        
+    }
+
+    .experince a{
+        flex: 0 0 100%;
+    }
+
+    .suivant{
+        flex-direction: column;
+    }
+
+    .block_MDE{
+        width: unset;
+    }
+
+    .container_block_MDE a{
+        flex: 0 0 100%
+    }
+
+    .container_all_block{
+        gap: 16px;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 375px) {
+    .container_font img{
+        flex: 0 0 100%;
+        height: 20vh;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .container_font{
+        gap: 16px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .container_button{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #hero-station > div.value_proposal_sation.column-jcc-aic > h2{
+        width: 250px;
+        text-align: center;
+    }
+
+
+}

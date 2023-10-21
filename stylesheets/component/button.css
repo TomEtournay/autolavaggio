@@ -1,0 +1,45 @@
+button{
+    width: fit-content;
+    padding: 16px 24px;
+    border-radius: 4px;
+
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    cursor: pointer;
+
+}
+
+.btn-red{
+    background: var(--primary-red);
+}
+
+.btn-blue{
+    background: var(--primary-bleu);
+}
+
+.btn-white{
+    background: var(--primary-white);
+
+}
+
+.btn-red-transparent{
+    background: none;
+    border: solid 1px var(--primary-red)!important;
+    color: var(--primary-red);
+
+}
+
+.btn-blue-transparent{
+    background: none;
+    border: solid 1px var(--primary-bleu);
+    color: var(--primary-bleu);
+}
+
+
+
+.btn-fullwidth{
+    width: -webkit-fill-available;
+}
+
